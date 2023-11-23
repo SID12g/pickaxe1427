@@ -25,71 +25,6 @@
     </Media>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\17.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\18.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\19.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\20.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\0.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\1.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\2.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\3.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\4.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\5.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\6.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\7.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\8.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\9.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\10.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\11.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\12.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\13.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\14.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\15.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="..\..\..\Users\sid12g\Desktop\pickaxe\16.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="ImageLayer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -102,5 +37,70 @@
     <ClInclude Include="ImageLayerInterface.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="0.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="1.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="2.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="3.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="4.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="5.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="6.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="7.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="8.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="9.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="10.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="11.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="12.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="13.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="14.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="15.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="16.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="17.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="18.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="19.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="20.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
   </ItemGroup>
 </Project>

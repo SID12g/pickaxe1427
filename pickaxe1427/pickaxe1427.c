@@ -39,28 +39,262 @@ char userName[100] = "unknown";
 int userLevel = 0;
 int userMoney = 2000000;
 
-void viewImage(int level) {
-    char levelC[10];
-    sprintf(levelC, "%d.bmp", level);
-    levelC[strlen(levelC)] = 0;
+void init() {
+    system("cls");
+    Sleep(1000);
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+}
+
+void viewImage0() {
     ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
     imageLayer.initialize(&imageLayer); //초기화
     Image images[3] = {
-        {levelC, 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+        {L"0.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
     }; //배열의 첫 원소가 가장 아래 그려진다.
     imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
     imageLayer.images = images;
     imageLayer.renderAll(&imageLayer);
     Sleep(2000);
-    getchar();
-
-
 }
 
-void init() {
-    system("cls");
-    Sleep(1000);
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+void viewImage1(){
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"1.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage2() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"2.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage3() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"3.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage4() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"4.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage5() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"5.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage6() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"6.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage7() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"7.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage8() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"1.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage9() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"9.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage10() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"10.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage11() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"11.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage12() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"12.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage13() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"13.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage14() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"14.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage15() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"15.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage16() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"16.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage17() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"17.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage18() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"18.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage19() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"19.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
+}
+
+void viewImage20() {
+    ImageLayer imageLayer = DEFAULT_IMAGE_LAYER;
+    imageLayer.initialize(&imageLayer); //초기화
+    Image images[3] = {
+        {L"20.bmp", 0, 0, 2}, //{이미지 이름, 시작 x좌표, 시작 y좌표, 크기 배율(쓰지 않으면 기본값인 16이 들어감)} 
+    }; //배열의 첫 원소가 가장 아래 그려진다.
+    imageLayer.imageCount = 3; //images 배열의 크기보다 작거나 같아야 한다.
+    imageLayer.images = images;
+    imageLayer.renderAll(&imageLayer);
+    Sleep(2000);
 }
 
 void gotoxy(int x, int y)
@@ -183,8 +417,34 @@ void easyMode() {
         strcpy(pix[i].name, pName[i]);
         pix[i].percent = ez[i];
     }
-    
+
     while (1) {
+        init();
+        switch (userLevel) {
+        case 0: viewImage0(); break;
+        case 1: viewImage1(); break;
+        case 2: viewImage2(); break;
+        case 3: viewImage3(); break;
+        case 4: viewImage4(); break;
+        case 5: viewImage5(); break;
+        case 6: viewImage6(); break;
+        case 7: viewImage7(); break;
+        case 8: viewImage8(); break;
+        case 9: viewImage9(); break;
+        case 10: viewImage10(); break;
+        case 11: viewImage11(); break;
+        case 12: viewImage12(); break;
+        case 13: viewImage13(); break;
+        case 14: viewImage14(); break;
+        case 15: viewImage15(); break;
+        case 16: viewImage16(); break;
+        case 17: viewImage17(); break;
+        case 18: viewImage18(); break;
+        case 19: viewImage19(); break;
+        case 20: viewImage20(); break;
+        }
+
+        init();
         printf("단계 : %d\n", userLevel);
         printf("강화 성공 확률 : %d%\n", pix[userLevel].percent);
         printf("보유 돈 : %d\n", userMoney);
@@ -192,39 +452,16 @@ void easyMode() {
         printf("게임 모드 : 이지 모드");
         int n = keyControl();
         switch (n) {
-            case SUBMIT: {
-                init();
-                srand(time(NULL));
-                int random = rand() % 100;
-                if (random < ez[userLevel]) {
-                    if(userLevel == 19) {
-                        init();
-                        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
-                        gotoxy(47, 15);
-                        printf("당신의 도전은 성공하였습니다.\n   다시 시작 : space\n   quit : w");
-                        while (1) {
-                            int n = keyControl();
-                            if (n == SUBMIT) {
-                                userLevel = 0;
-                                userMoney = 2000000;
-                                init();
-                                gotoxy(0, 0);
-                                easyMode();
-                            } else if(n == UP) {
-                                return;
-                            }
-                        }
-                    }
-                    else if (userLevel < 20) {
-                        userMoney -= cost[userLevel];
-                        userLevel += 1;
-                    }
-                }
-                else {
+        case SUBMIT: {
+            init();
+            srand(time(NULL));
+            int random = rand() % 100;
+            if (random < ez[userLevel]) {
+                if (userLevel == 19) {
                     init();
-                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
                     gotoxy(47, 15);
-                    printf("당신의 도전은 %d단계에서 멈췄습니다.\n   다시 시작 : space\n    quit:w", userLevel);
+                    printf("당신의 도전은 성공하였습니다.\n   다시 시작 : space\n   quit : w");
                     while (1) {
                         int n = keyControl();
                         if (n == SUBMIT) {
@@ -233,21 +470,47 @@ void easyMode() {
                             init();
                             gotoxy(0, 0);
                             easyMode();
-                        } else if(n == UP) {
+                        }
+                        else if (n == UP) {
                             return;
                         }
                     }
                 }
-                break;
+                else if (userLevel < 20) {
+                    userMoney -= cost[userLevel];
+                    userLevel += 1;
+                }
             }
+            else {
+                init();
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+                gotoxy(47, 15);
+                printf("당신의 도전은 %d단계에서 멈췄습니다.\n   다시 시작 : space\n    quit:w", userLevel);
+                while (1) {
+                    int n = keyControl();
+                    if (n == SUBMIT) {
+                        userLevel = 0;
+                        userMoney = 2000000;
+                        init();
+                        gotoxy(0, 0);
+                        easyMode();
+                    }
+                    else if (n == UP) {
+                        return;
+                    }
+                }
+            }
+            break;
+        }
+        case DOWN: {
+            //save
+        }
         }
     }
 }
 
 
 int main() {
-    init();
-    viewImage(1);
     PlaySound(L"bgm.wav", 0, SND_FILENAME | SND_ASYNC | SND_LOOP);
     _getch();
     titleDraw();
