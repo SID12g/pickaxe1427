@@ -7,6 +7,8 @@
 #include <mmsystem.h>
 #include "ImageLayer.h"
 #pragma comment(lib,"winmm.lib")
+#define _CRT_SECURE_NO_WARNINGS
+#define SAVE "save.txt"
 
 #define UP 0
 #define DOWN 1
@@ -404,6 +406,8 @@ void sayHello() {
     init();
 }
 
+int userMode = 0;
+
 int ez[21] = { 100, 95, 95, 95, 90, 90, 85, 85, 80, 75, 70, 65, 65, 60, 60, 55, 50, 45, 40, 30 };
 
 int hd[21] = { 100, 95, 90, 90, 85, 85, 80, 80, 75, 75, 70, 65, 60, 50, 50, 45, 35, 30, 30, 25 };
@@ -449,7 +453,8 @@ void easyMode() {
         printf("강화 성공 확률 : %d%\n", pix[userLevel].percent);
         printf("보유 돈 : %d\n", userMoney);
         printf("강화 비용 : %d\n", cost[userLevel]);
-        printf("게임 모드 : 이지 모드");
+        printf("게임 모드 : 이지 모드\n");
+        printf("save : s");
         int n = keyControl();
         switch (n) {
         case SUBMIT: {
@@ -503,12 +508,115 @@ void easyMode() {
             break;
         }
         case DOWN: {
-            //save
+             
+                FILE* file = fopen(SAVE, "w");
+                fprintf(file, "%s %d %d %d", userName, userMoney, userLevel, userMode );
+                fclose(file);
         }
         }
     }
 }
 
+void hardMode() {
+    for (int i = 0; i < 21; i++) {
+        strcpy(pix[i].name, pName[i]);
+        pix[i].percent = ez[i];
+    }
+
+    while (1) {
+        init();
+        switch (userLevel) {
+        case 0: viewImage0(); break;
+        case 1: viewImage1(); break;
+        case 2: viewImage2(); break;
+        case 3: viewImage3(); break;
+        case 4: viewImage4(); break;
+        case 5: viewImage5(); break;
+        case 6: viewImage6(); break;
+        case 7: viewImage7(); break;
+        case 8: viewImage8(); break;
+        case 9: viewImage9(); break;
+        case 10: viewImage10(); break;
+        case 11: viewImage11(); break;
+        case 12: viewImage12(); break;
+        case 13: viewImage13(); break;
+        case 14: viewImage14(); break;
+        case 15: viewImage15(); break;
+        case 16: viewImage16(); break;
+        case 17: viewImage17(); break;
+        case 18: viewImage18(); break;
+        case 19: viewImage19(); break;
+        case 20: viewImage20(); break;
+        }
+
+        init();
+        printf("단계 : %d\n", userLevel);
+        printf("강화 성공 확률 : %d%\n", pix[userLevel].percent);
+        printf("보유 돈 : %d\n", userMoney);
+        printf("강화 비용 : %d\n", cost[userLevel]);
+        printf("게임 모드 : 하드 모드\n");
+        printf("save : s");
+        int n = keyControl();
+        switch (n) {
+        case SUBMIT: {
+            init();
+            srand(time(NULL));
+            int random = rand() % 100;
+            if (random < hd[userLevel]) {
+                if (userLevel == 19) {
+                    init();
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
+                    gotoxy(47, 15);
+                    printf("당신의 도전은 성공하였습니다.\n   다시 시작 : space\n   quit : w");
+                    while (1) {
+                        int n = keyControl();
+                        if (n == SUBMIT) {
+                            userLevel = 0;
+                            userMoney = 2000000;
+                            init();
+                            gotoxy(0, 0);
+                            hardMode();
+                        }
+                        else if (n == UP) {
+                            return;
+                        }
+                    }
+                }
+                else if (userLevel < 20) {
+                    userMoney -= cost[userLevel];
+                    userLevel += 1;
+                }
+            }
+            else {
+                init();
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+                gotoxy(47, 15);
+                printf("당신의 도전은 %d단계에서 멈췄습니다.\n   다시 시작 : space\n    quit:w", userLevel);
+                while (1) {
+                    int n = keyControl();
+                    if (n == SUBMIT) {
+                        userLevel = 0;
+                        userMoney = 2000000;
+                        init();
+                        gotoxy(0, 0);
+                        easyMode();
+                    }
+                    else if (n == UP) {
+                        return;
+                    }
+                }
+            }
+            break;
+        }
+        case DOWN: {
+
+            FILE* file = fopen(SAVE, "w");
+            fprintf(file, "%s %d %d %d", userName, userMoney, userLevel, userMode);
+            fclose(file);
+        }
+        }
+    }
+}
 
 int main() {
     PlaySound(L"bgm.wav", 0, SND_FILENAME | SND_ASYNC | SND_LOOP);
@@ -519,6 +627,7 @@ int main() {
     printf("menu : %d", menu);
     switch (menu) {
         case 0: {
+            userMode = 0;
             gotoxy(53, 15);
             printf("유저명을 입력해주세요.\n");
             gotoxy(60, 17);
@@ -528,16 +637,25 @@ int main() {
             break;
         }
         case 2: {
+            userMode = 1;
             gotoxy(53, 15);
             printf("유저명을 입력해주세요.\n");
             gotoxy(60, 17);
             scanf("%s", userName);
             init();
+            hardMode();
             break;
-            //하드
         }
         case 4: {
-            //불러오기
+            FILE* file = fopen(SAVE, "w");
+            fprintf(file, "%s %d %d %d", userName, userMoney, userLevel, userMode);
+            fclose(file);
+            if (userMode) {
+                hardMode();
+            }
+            else {
+                easyMode();
+            }
             break;
         }
         case 6: {
